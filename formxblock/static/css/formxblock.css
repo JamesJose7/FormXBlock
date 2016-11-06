@@ -1,0 +1,42 @@
+/* CSS for FormXBlock */
+
+.field, select {
+	-ms-box-sizing:content-box;
+-moz-box-sizing:content-box;
+-webkit-box-sizing:content-box; 
+box-sizing:content-box;
+}
+
+.field {
+	width: 200px;
+	height: 15px;
+}
+
+select {
+	width: 200px;
+	height: 20px;
+}
+
+.form_block .count {
+    font-weight: bold;
+}
+
+.form_block p {
+    cursor: pointer;
+}
+
+button {
+	display: block;
+}
+
+#confirm-dialog, #user-alert {
+	height: 50px;
+	width: 50%;
+	padding: 40px 20px;
+	margin: auto;
+}
+
+#confirm-dialog h2, #user-alert h2 {
+	margin: auto;
+	font-size: 1.3em;
+}

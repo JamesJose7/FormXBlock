@@ -1,0 +1,77 @@
+<div id="form-container">
+	<h2>Datos Generales</h2>
+	<span>
+		<p>Ingrese su usuario OpenCampus</p>
+		<input class="input-form" type="text" id="usuario" class="field">
+	</span>
+	<span>
+		<p>País</p>
+		<select name="pais" id="select_pais" class="input-form">
+			<option value="aqui">Aqui</option>
+			<option value="deben">Deben</option>
+			<option value="haber">Haber</option>
+			<option value="paises">Paises</option>
+		</select>
+	</span>
+	<span>
+		<p class="test">Ciudad</p>
+		<input class="input-form" type="text" class="field">
+	</span>
+	<span>
+		<p class="test">Lugar de la investigación</p>
+		<input class="input-form" type="text" class="field">
+	</span>
+	<span>
+		<p class="test">Descripción del lugar</p>
+		<textarea name="text" id="desc_lugar" cols="60" rows="10" class="input-form"></textarea>
+	</span>
+	<h2>Datos de investigación</h2>
+	<span>
+		<p class="test">Textura</p>
+		<textarea name="textura" id="textura" cols="60" rows="10" class="input-form"></textarea>
+	</span>
+	<span>
+		<p class="test">pH</p>
+		<input class="input-form" type="text" class="field">
+	</span>
+	<span>
+		<p class="test">Materia orgánica</p>
+		<input class="input-form" type="text" class="field">
+	</span>
+	<span>
+		<p class="test">Nitrógeno</p>
+		<input class="input-form" type="text" class="field">
+	</span>
+	<span>
+		<p class="test">Breve reflexión de los parámetros consultados</p>
+		<textarea name="reflexion" id="reflexion" cols="60" rows="10" class="input-form"></textarea>
+	</span>
+	<span>
+		<p class="test">Bibliografía</p>
+		<textarea name="bibliografia" id="bibliografia" cols="60" rows="10" class="input-form"></textarea>
+	</span>
+	<span>
+		<p class="test">Observaciones</p>
+		<textarea name="observaciones" id="observaciones" class="input-form" cols="60" rows="10">{self.usuario} - 
+{self.pais} - 
+{self.ciudad} - 
+{self.lugarInv} - 
+{self.descripcionLugar} - 
+{self.textura} - 
+{self.ph} - 
+{self.materiaOrg} - 
+{self.nitrogeno} - 
+{self.reflexion} - 
+{self.bibliografia} - 
+{self.observaciones}</textarea>
+	</span>
+	
+	<button class="send">Continue</button>
+	
+</div>
+<div id="confirm-dialog">
+	<h2>Su información ha sido enviada</h2>
+</div>
+<div id="user-alert">
+	<h2>Usted ya ha tomado esta encuesta</h2>
+</div>

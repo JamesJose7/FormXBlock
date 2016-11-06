@@ -1,0 +1,12 @@
+formxblock/__init__.py
+formxblock/formxblock.py
+formxblock/static/README.txt
+formxblock/static/css/formxblock.css
+formxblock/static/html/formxblock.html
+formxblock/static/js/src/formxblock.js
+formxblock_xblock.egg-info/PKG-INFO
+formxblock_xblock.egg-info/SOURCES.txt
+formxblock_xblock.egg-info/dependency_links.txt
+formxblock_xblock.egg-info/entry_points.txt
+formxblock_xblock.egg-info/requires.txt
+formxblock_xblock.egg-info/top_level.txt
