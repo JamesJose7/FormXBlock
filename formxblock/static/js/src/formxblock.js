@@ -8,11 +8,11 @@ function FormXBlock(runtime, element) {
         //alert("QUE HUBO");
         $('#form-container', element).hide(2000);
         //$('#usuario', element).text(result.tookSurvey);
-        if (result.tookSurvey == "True") {
-            $('#user-alert', element).show(2000);
-        } else {
-            $('#confirm-dialog', element).show(2000);
-        }
+        
+        //$('#user-alert', element).show(2000);
+        
+        $('#confirm-dialog', element).show(2000);
+        
     }
 
     function test(result) {
@@ -46,7 +46,7 @@ function FormXBlock(runtime, element) {
             type: "POST",
             url: handlerUrl,
             data: JSON.stringify(jsonObj),
-            success: changeText
+            success: changeText(jsonObj)
         });
     }
 

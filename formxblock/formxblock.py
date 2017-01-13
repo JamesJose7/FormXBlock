@@ -70,9 +70,7 @@ class FormXBlock(XBlock):
         #self.nombre = data['datos'][0]
         #self.nombre2 = data['datos'][2]
 
-        if self.tookSurvey:
-            return {'tookSurvey': self.tookSurvey}
-
+        
         self.usuario = data['datos'][0]
         self.pais = data['datos'][1]
         self.ciudad = data['datos'][2]
