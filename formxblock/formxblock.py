@@ -8,14 +8,8 @@ from xblock.fragment import Fragment
 
 
 class FormXBlock(XBlock):
-    """
-    TO-DO: document what your XBlock does.
-    """
-
-    # Fields are defined on the class.  You can access them in your code as
-    # self.<fieldname>.
-
-    # TO-DO: delete count, and define your own fields.
+    
+    count = Integer(default=0, help="contador encuestas", scope=Scope.user_state_summary)
     usuario = String(help="Usuario open Campus", default=None, scope=Scope.user_state)
     pais = String(help="Pais usuario", default=None, scope=Scope.user_state)
     ciudad = String(help="ciudad usuario", default=None, scope=Scope.user_state)
@@ -36,7 +30,6 @@ class FormXBlock(XBlock):
         data = pkg_resources.resource_string(__name__, path)
         return data.decode("utf8")
 
-    # TO-DO: change this view to display your data your own way.
     def student_view(self, context=None):
         """
         The primary view of the FormXBlock, shown to students
@@ -49,28 +42,10 @@ class FormXBlock(XBlock):
         frag.initialize_js('FormXBlock')
         return frag
 
-    # TO-DO: change this handler to perform your own actions.  You may need more
-    # than one handler, or you may not need any handlers at all.
     @XBlock.json_handler
     def test_func(self, data, suffix=''):
-        """
-        An example handler, which increments the data.
-        """
-        # Just to show data coming in...
-        #assert data['hello'] == 'world'
-
-        '''
-        first json test
-        if data['nombre'] == 'first json':
-            self.nombre = 'asignacion en json handler'
-        '''
 
         #Asignacion de campos a datos
-        
-        #self.nombre = data['datos'][0]
-        #self.nombre2 = data['datos'][2]
-
-        
         self.usuario = data['datos'][0]
         self.pais = data['datos'][1]
         self.ciudad = data['datos'][2]
@@ -85,11 +60,15 @@ class FormXBlock(XBlock):
         self.observaciones = data['datos'][11]
 
         self.tookSurvey = True
+        self.count += 1
 
-        return 
+        return {"count": self.count}
 
-    # TO-DO: change this to create the scenarios you'd like to see in the
-    # workbench while developing your XBlock.
+    @XBlock.json_handler
+    def get_count(self, data, suffix=''):
+
+        return {"count": self.count}
+
     @staticmethod
     def workbench_scenarios():
         """A canned scenario for display in the workbench."""

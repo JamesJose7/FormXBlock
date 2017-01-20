@@ -52,26 +52,84 @@
 	</span>
 	<span>
 		<p class="test">Observaciones</p>
-		<textarea name="observaciones" id="observaciones" class="input-form" cols="60" rows="10">{self.usuario} - 
-{self.pais} - 
-{self.ciudad} - 
-{self.lugarInv} - 
-{self.descripcionLugar} - 
-{self.textura} - 
-{self.ph} - 
-{self.materiaOrg} - 
-{self.nitrogeno} - 
-{self.reflexion} - 
-{self.bibliografia} - 
-{self.observaciones}</textarea>
+		<textarea name="observaciones" id="observaciones" class="input-form" cols="60" rows="10"></textarea>
 	</span>
 	
-	<button class="send">Continue</button>
-	
+	<div id="button_container">
+		<button class="send">Continue</button>
+		<button class="view_data">Data</button>
+	</div>
 </div>
+
+
 <div id="confirm-dialog">
 	<h2>Su información ha sido enviada</h2>
 </div>
+
+
 <div id="user-alert">
 	<h2>Usted ya ha tomado esta encuesta</h2>
+</div>
+
+
+<div id="display-data">
+	<h2>Datos </h2>
+	<table>
+	  <col width="20%">
+	  <col width="80%">
+	  	<tr>
+			<th>Encuestas tomadas</th>
+			<td id="contador"></td>
+		</tr>
+		<tr>
+			<th>Usuario</th>
+			<td>{self.usuario}</td>
+		</tr>
+		<tr>
+			<th>País</th>
+			<td>{self.pais}</td>
+		</tr>
+		<tr>
+			<th>Ciudad</th>
+			<td>{self.ciudad}</td>
+		</tr>
+		<tr>
+			<th>Lugar de investigación</th>
+			<td>{self.lugarInv}</td>
+		</tr>
+		<tr>
+			<th>Descripción</th>
+			<td>{self.descripcionLugar}</td>
+		</tr>
+		<tr>
+			<th>Textura</th>
+			<td>{self.textura}</td>
+		</tr>
+		<tr>
+			<th>pH</th>
+			<td>{self.ph}</td>
+		</tr>
+		<tr>
+			<th>Materia Orgánica</th>
+			<td>{self.materiaOrg}</td>
+		</tr>
+		<tr>
+			<th>Nitrógeno</th>
+			<td>{self.nitrogeno}</td>
+		</tr>
+		<tr>
+			<th>Reflexión</th>
+			<td>{self.reflexion}</td>
+		</tr>
+		<tr>
+			<th>Bibliografía</th>
+			<td>{self.bibliografia}</td>
+		</tr>
+		<tr>
+			<th>Observaciones</th>
+			<td>{self.observaciones}</td>
+		</tr>
+	</table>
+
+	<button id="back_to_form">Back</button>
 </div>
