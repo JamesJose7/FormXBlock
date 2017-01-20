@@ -23,7 +23,7 @@ def package_data(pkg, roots):
 setup(
     name='formxblock-xblock',
     version='1.0.12',
-    description='formxblock XBlock',  \
+    description='formxblock XBlock', 
     license='UNKNOWN',          
     packages=[
         'formxblock',
